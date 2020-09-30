@@ -1,0 +1,10 @@
+Create workspace directory
+# mkdir workspace
+cd into it
+# cd workspace
+export GOPATH
+# export GOPATH=$(pwd)
+create src and package directory
+# mkdir -p src/writefile
+write cat
+write read
