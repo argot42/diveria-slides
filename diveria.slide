@@ -1,0 +1,69 @@
+Go & Diveria
+15 Agosto 2020
+
+Pablo Tesari
+
+* Que es Go?
+
+Go es un leanguaje compilado de tipado estático creado en Google por Rob Pike, Ken Thompson y Robert Griesemer.
+
+: Es un lenguaje que soporta concurrencia, recolección de basura y tiene rápidos tiempos de compilación.
+
+Un ejemplo
+
+.play helloworld.go
+
+* Interfaces
+
+.play interface.go /START OMIT/,/END OMIT/
+
+Un tipo implementa una interfaz definiendo los métodos requeridos.
+
+* Stringer
+
+.code stringer.go
+
+.link http://golang.org/pkg/fmt/#Stringer
+
+Las interfaces en Go no necesitan *Implement* tan solo necesitan implementar un método que coincida con la *signature*.
+
+: Las interfaces en go no necesitan implements. Como vieron en el ejemplo de más arriba el struct world no está indicando que implementa cierta interfaz
+: tan solo el hecho de que tenga un método String que no recibe argumentos y devuleve una string (tiene la misma signature) ya es suficiente.
+: Esto nos permite que el uso de interfaces sea fácil y que no se generen dependencias innecesarias.
+: Por ejemplo el paquete time es la es la única forma de obtener el tiempo en go y por lo tanto debería mantenerse low level. Si se debería implementar explicitamente la interfaz fmt y sus dependecias deberían ser importadas para poder usar el paquete.
+
+* Time
+
+.play timeprint.go /START OMIT/,/END OMIT/
+
+El paquete time no tiene que saber sobre la interfaz *Stringer* de fmt.
+
+* Otras interfaces
+
+.code writer.go
+
+.link http://golang.org/pkg/io/#Writer
+
+.code reader.go
+
+.link http://golang.org/pkg/io/#Reader
+
+: Estas interfaces describen lo que en unix sería write y read callsystems respectivamente.
+
+* Web Crawler
+
+.play webcrawler.go /START OMIT/,/END OMIT/
+
+* Concurrency
+
+.play concurrent-webcrawler.go /^func crawl\(/,/^}/
+
+: los cambios que se hicieron fueron en vez de hacer el print directamente enviar el string por un channel. La flechita es el "communication operator" y concatenado al chan es una anotación que indica en que dirección esta operacion esta permitida (en este caso solo enviar).
+
+* Cambios en Main
+
+.play concurrent-webcrawler.go /^func main\(\)/,/^}/
+
+* Timeout
+
+.play -edit timeout-webcrawler.go /START OMIT/,/END OMIT/
