@@ -1,4 +1,4 @@
-Go & Diveria
+Introducción a Go
 15 Agosto 2020
 
 Pablo Tesari
@@ -12,6 +12,10 @@ Go es un leanguaje compilado de tipado estático creado en Google por Rob Pike, 
 Un ejemplo
 
 .play helloworld.go
+
+: La palabra world esta en japones, Go utiliza Unicode y UTF-8 en todos lados y especificamente el source
+: code esta definido para que sea UTF-8, osea el compilador no acepta otros encodings
+: todos los programas de go empiazan en el package main y en la función main
 
 * Interfaces
 
