@@ -1,0 +1,6 @@
+#!/bin/sh
+
+present -orighost localhost -notes 2>/dev/null
+
+# browse localhost:3999
+# press N to show notes
