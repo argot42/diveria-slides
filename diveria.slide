@@ -8,14 +8,25 @@ Pablo Tesari
 Go es un leanguaje compilado de tipado estático creado en Google por Rob Pike, Ken Thompson y Robert Griesemer.
 
 : Es un lenguaje que soporta concurrencia, recolección de basura y tiene rápidos tiempos de compilación.
+: Dos de sus creadores Ken y Rob son ex empleados de Bell Labs y trabajaron en Unix y C junto con Denis Ritchie
+: Según Rob Pike la motivación para la creacion de este lenguaje es ser simple, motivado por que al asistir a Lang.Next, una conferencia de Microsoft sobre lenguajes, la mayoría de las charlas eran sobre nuevas features de los lenguajes traidas de otros.
+: Esto es un problema por que todos los lenguajes estan convirtiendose en un solo lenguaje
+: Hay un concepto que se llama language relativity, que dice que dependiendo que lenguaje se usa afecta a tu personalidad, hay poca evidencia de esto para lenguajes naturales.
+: Para los lenguajes de programación es un poco mas cierto, escribimos programas muy distintos dependiendo el tipo de lenguaje que usemos logico, procedural, funcional, etc.
+: Rob pike cree que es necesario que haya diferentes lenguajes para diferentes problemas
+: Los lenguajes se estan volviendo mas grandes (mas complejos) y a la vez mas similares entre ellos
+: --
+: --
 
-Un ejemplo
+* Un ejemplo
 
 .play helloworld.go
 
-: La palabra world esta en japones, Go utiliza Unicode y UTF-8 en todos lados y especificamente el source
-: code esta definido para que sea UTF-8, osea el compilador no acepta otros encodings
-: todos los programas de go empiazan en el package main y en la función main
+: Todo programa en Go comienza en el package main en la función main.
+
+* Otra ejemplo
+
+.play simple.go
 
 * Interfaces
 
@@ -68,6 +79,26 @@ El paquete time no tiene que saber sobre la interfaz *Stringer* de fmt.
 
 .play concurrent-webcrawler.go /^func main\(\)/,/^}/
 
+: estos son los cambios en el main que se necesitan para hacer el web crawler concurrente
+
 * Timeout
 
 .play -edit timeout-webcrawler.go /START OMIT/,/END OMIT/
+
+* Cosas interesantes
+
+Simplicity is complicated 
+
+.link https://www.youtube.com/watch?v=rFejpH_tAHM
+
+Concurrency is not parallelism
+
+.link https://www.youtube.com/watch?v=oV9rvDllKEg
+
+Blog oficial de Go
+
+.link https://blog.golang.org
+
+Russ Cox
+
+.link https://research.swtch.com/
