@@ -24,10 +24,6 @@ Go es un leanguaje compilado de tipado estático creado en Google por Rob Pike, 
 
 : Todo programa en Go comienza en el package main en la función main.
 
-* Otra ejemplo
-
-.play simple.go
-
 * Interfaces
 
 .play interface.go /START OMIT/,/END OMIT/
