@@ -1,7 +1,25 @@
 Introducción a Go
-15 Agosto 2020
+11 Diciembre 2020
 
 Pablo Tesari
+
+* Ken Thompson
+
+.image ken.gif
+
+: UTF-8, Unix, Plan 9 - Contribuyo a C (Dennis Ritchie), Multics, Inferno
+
+* Rob Pike
+
+.image rob.jpg
+
+: UTF-8, Inferno, Limbo
+
+* Robert Griesemer
+
+.image griesemer.jpg
+
+: Google's V8 JavaScript engine, the Sawzall language, the Java HotSpot virtual machine, and the Strongtalk system
 
 * Que es Go?
 
@@ -18,21 +36,9 @@ Go es un leanguaje compilado de tipado estático creado en Google por Rob Pike, 
 : --
 : --
 
-* Ken Thompson
-
-.image ken.gif
-
-: UTF-8, Unix, Plan 9 - Contribuyo a C (Dennis Ritchie), Multics, Inferno
-
-* Rob Pike
-
-.image rob.jpg
-
-: UTF-8, Inferno, Limbo
-
 * Un ejemplo
 
-.play helloworld.go
+.play -edit helloworld.go
 
 : Todo programa en Go comienza en el package main en la función main.
 
@@ -95,6 +101,10 @@ El paquete time no tiene que saber sobre la interfaz *Stringer* de fmt.
 
 * Links interesantes
 
+Blog oficial de Go
+
+.link https://blog.golang.org
+
 Simplicity is complicated 
 
 .link https://www.youtube.com/watch?v=rFejpH_tAHM
@@ -103,14 +113,12 @@ Concurrency is not parallelism
 
 .link https://www.youtube.com/watch?v=oV9rvDllKEg
 
-Blog oficial de Go
-
-.link https://blog.golang.org
+* Links aún más interesantes
 
 Russ Cox
 
-.link https://research.swtch.com/
+.link https://research.swtch.com
 
 Cat-v
 
-.link http://cat-v.org/
+.link http://cat-v.org
