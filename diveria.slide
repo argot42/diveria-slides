@@ -8,6 +8,10 @@ Pablo Tesari
 .image ken.gif
 
 : UTF-8, Unix, Plan 9 - Contribuyo a C (Dennis Ritchie), Multics, Inferno
+: Belle Chess computer, primera en alcanzar master level
+: Multics: MIT tenía un time-sharing system muy bueno, así que decidieron crear uno mejor. Según Ken that's the kiss of death
+: --
+: --
 
 * Rob Pike
 
@@ -36,17 +40,19 @@ Go es un leanguaje compilado de tipado estático creado en Google por Rob Pike, 
 : --
 : --
 
-* Un ejemplo
-
-.play -edit helloworld.go
-
-: Todo programa en Go comienza en el package main en la función main.
-
 * Interfaces
 
 .play interface.go /START OMIT/,/END OMIT/
 
 Un tipo implementa una interfaz definiendo los métodos requeridos.
+
+Las interfaces en Go no necesitan *Implement* tan solo necesitan implementar un método que coincida con la *signature*.
+
+: Las interfaces en go no necesitan implements. Como vieron en el ejemplo de más arriba el struct world no está indicando que implementa cierta interfaz
+: tan solo el hecho de que tenga un método String que no recibe argumentos y devuleve una string (tiene la misma signature) ya es suficiente.
+: Esto nos permite que el uso de interfaces sea fácil y que no se generen dependencias innecesarias.
+: --
+: --
 
 * Stringer
 
@@ -54,30 +60,13 @@ Un tipo implementa una interfaz definiendo los métodos requeridos.
 
 .link http://golang.org/pkg/fmt/#Stringer
 
-Las interfaces en Go no necesitan *Implement* tan solo necesitan implementar un método que coincida con la *signature*.
-
-: Las interfaces en go no necesitan implements. Como vieron en el ejemplo de más arriba el struct world no está indicando que implementa cierta interfaz
-: tan solo el hecho de que tenga un método String que no recibe argumentos y devuleve una string (tiene la misma signature) ya es suficiente.
-: Esto nos permite que el uso de interfaces sea fácil y que no se generen dependencias innecesarias.
-: Por ejemplo el paquete time es la es la única forma de obtener el tiempo en go y por lo tanto debería mantenerse low level. Si se debería implementar explicitamente la interfaz fmt y sus dependecias deberían ser importadas para poder usar el paquete.
-
 * Time
 
 .play timeprint.go /START OMIT/,/END OMIT/
 
 El paquete time no tiene que saber sobre la interfaz *Stringer* de fmt.
 
-* Otras interfaces
-
-.code writer.go
-
-.link http://golang.org/pkg/io/#Writer
-
-.code reader.go
-
-.link http://golang.org/pkg/io/#Reader
-
-: Estas interfaces describen lo que en unix sería write y read callsystems respectivamente.
+: Por ejemplo el paquete time es la es la única forma de obtener el tiempo en go y por lo tanto debería mantenerse low level. Si se debería implementar explicitamente la interfaz fmt y sus dependecias deberían ser importadas para poder usar el paquete.
 
 * Web Crawler
 
@@ -101,10 +90,6 @@ El paquete time no tiene que saber sobre la interfaz *Stringer* de fmt.
 
 * Links interesantes
 
-Blog oficial de Go
-
-.link https://blog.golang.org
-
 A Tour of Go
 
 .link https://youtu.be/ytEkHepK08c
@@ -117,6 +102,16 @@ Concurrency is not parallelism
 
 .link https://youtu.be/oV9rvDllKEg
 
+Error handling and Go
+
+.link https://blog.golang.org/error-handling-and-go
+
+* Más Links
+
 Russ Cox
 
 .link https://research.swtch.com
+
+VCF East 2019 -- Brian Kernighan interviews Ken Thompson
+
+.link https://youtu.be/EY6q5dv_B-o
