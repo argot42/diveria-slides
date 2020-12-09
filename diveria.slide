@@ -10,6 +10,7 @@ Pablo Tesari
 : UTF-8, Unix, Plan 9 - Contribuyo a C (Dennis Ritchie), Multics, Inferno
 : Belle Chess computer, primera en alcanzar master level
 : Multics: MIT tenía un time-sharing system muy bueno, así que decidieron crear uno mejor. Según Ken that's the kiss of death
+: 77 años
 : --
 : --
 
@@ -17,17 +18,20 @@ Pablo Tesari
 
 .image rob.jpg
 
-: UTF-8, Inferno, Limbo
+: UTF-8, Inferno, Limbo, Plan 9
+: 64 años
 
 * Robert Griesemer
 
 .image griesemer.jpg
 
 : Google's V8 JavaScript engine, the Sawzall language, the Java HotSpot virtual machine, and the Strongtalk system
+: Trabajo con Rob Pike diseñando Sawzall
+: 56
 
 * Que es Go?
 
-Go es un leanguaje compilado de tipado estático creado en Google por Rob Pike, Ken Thompson y Robert Griesemer.
+Go es un leanguaje compilado de tipado creado en Google por Rob Pike, Ken Thompson y Robert Griesemer.
 
 : Es un lenguaje que soporta concurrencia, recolección de basura y tiene rápidos tiempos de compilación.
 : Dos de sus creadores Ken y Rob son ex empleados de Bell Labs y trabajaron en Unix y C junto con Denis Ritchie
